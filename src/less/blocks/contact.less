@@ -1,0 +1,51 @@
+.contact {
+    text-align: center;
+
+    & .form {
+        background-color: #fff;
+        color: #333;
+    }
+
+    & h2 {
+        margin-top: 0;
+    }
+
+    @media (min-width: @min-md) {
+
+        .content {
+            display: flex;
+        }
+
+        & header {
+            position: relative;
+            width: 50%;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & p {
+                font-size: 1.3em;
+                margin: 0;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 150px;
+                height: 150px;
+                background-image: url(../img/windows-icon.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        & .form {
+            width: 50%;
+            padding: 20px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.faq {
+    & details {
+        border-top: 2px solid #3f61a3;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        color: #3175b5;
+        font-size: 14px;
+
+        &:nth-of-type(1) {
+            margin-top: 80px;
+        }
+
+        @media (min-width: @min-lg) {
+            font-size: 16px;
+        }
+    }
+
+    & summary {
+        font-size: 16px;
+        line-height: 31px;
+        line-height: 1.2;
+        outline: none;
+
+        &:active,
+        &:focus {
+            color: #3f61a3;
+        }
+
+        @media (min-width: @min-lg) {
+            font-size: 21px;
+        }
+
+        @media (max-width: @min-md) {
+            text-decoration: underline;
+        }
+    }
+
+    & .list-nember {
+        padding-left: 1em;
+    }
+}

@@ -1,0 +1,29 @@
+.list-mark {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+
+    @media (min-width: @min-md) {
+        font-size: 18px;
+    }
+
+    @media (min-width: @min-lg) {
+        font-size: 20px;
+    }
+}
+
+.list-mark__item {
+    color: #3175b5;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 1em;
+
+    &::before {
+        content: url(../img/check.png);
+        position: absolute;
+        top: 0.1em;
+        left: 0;
+    }
+}

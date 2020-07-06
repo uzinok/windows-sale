@@ -1,0 +1,51 @@
+.btn {
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0acf59;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1;
+    color: #fff;
+
+    transition: 0.2s 0.2s ease-out;
+    box-shadow: 0 3px 0px rgb(19, 183, 85);
+
+    @media (min-width: @min-lg) {
+        padding: 15px 30px;
+
+        &::after {
+            width: calc(100% - 6px);
+            height: calc(100% - 18px);
+        }
+    }
+
+    &:hover {
+        background-color: #0be165;
+        box-shadow: 0 0 0 rgb(19, 183, 85);
+    }
+
+    &--form {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &--slider {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        background-color: #4c5499;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "HelveticaNeueCyr-Light";
+  color: #333;
+  text-align: left;
+}
+
+main {
+  padding: 100px 0 0;
+
+  @media (min-width: @min-md) {
+    padding-top: 90px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 985px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.hidde-md {
+
+  @media (max-width: @max-md) {
+    display: none;
+  }
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &:nth-child(odd) {
+    color: #fff;
+    background-image: url(../img/bg-md.jpg);
+
+    @media (min-width: @min-md) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+      background-image: url(../img/bg-xl.jpg);
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    }
+  }
+
+  &:not(:first-child) {
+
+    & h2::before {
+      content: "";
+      background-color: #3f61a3;
+      position: absolute;
+      height: 3px;
+      width: 40%;
+      bottom: -3px;
+      left: 50%;
+      margin-left: -20%;
+    }
+  }
+}
+
+.heading {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 20px;
+
+  @media (min-width: @min-md) {
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+  }
+
+  @media (min-width: @min-lg) {
+    font-size: 46px;
+  }
+}
+
+h2 {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'AA Bebas Neue';
+  font-size: 30px;
+
+  @media (min-width: @min-md) {
+    font-size: 38px;
+  }
+
+  @media (min-width: @min-lg) {
+    font-size: 48px;
+  }
+}
+
+.center {
+  text-align: center;
+}
