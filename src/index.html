@@ -12,24 +12,36 @@
 
 <body>
 
+  <div class="hidde">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="header">
 
     <div class="container">
 
       <div class="header__block-logo">
 
-        <a href="#" class="header__logo hidde-md">Windows<br>Sale</a>
+        <a href="#" class="header__logo hidde-md">
+          <svg width="50" height="50">
+            <use xlink:href="#microsoft"></use>
+          </svg>
+        </a>
 
         <p class="header__logo-promo">
-          Акция! <strong>Скидки до 80%</strong>
-          <span>на продукты Microsoft!</span>
+          НЕ УПУСТИ ШАНС КУПИТЬ 
+          <span>ПРОДУКТЫ MICROSOFT</span>
+          <strong>СО СКИДКОЙ 50%</strong>
         </p>
         <!-- /header__logo-promo -->
       </div>
       <!-- /header__block-logo -->
 
       <div class="header__block-contact">
-        <a href="#" class="header__link">mail@email.ru</a>
+        <div class="hidde-md">
+          <p>Нужна консультация?</p>
+          <p>Мы перезвоним через 3 минуты!</p>
+        </div>
         <button class="header__link btn">Заказать звонок</button>
       </div>
       <!-- /header__block-contact -->
@@ -41,43 +53,17 @@
 
   <main>
 
-    <section class="contact">
-      <div class="container">
-
-        <h1 class="heading">НЕ УПУСТИ ШАНС КУПИТЬ СО СКИДКОЙ 50% ПРОДУКТЫ Microsoft</h1>
-
-        <div class="content">
-          <header>
-            <p>Нужна консультация?</p>
-            <p>Мы перезвоним через 3 минуты!</p>
-          </header>
-          <!-- /header -->
-
-          <form action="#" class="form">
-            <h2>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h2>
-
-            <input type="text" placeholder="Как к вам обращаться?">
-            <input type="tel" placeholder="Ваш номер телефона">
-
-            <button class="btn btn--form">Заказать</button>
-          </form>
-          <!-- /form -->
-        </div>
-        <!-- /content -->
-      </div>
-      <!-- /container -->
-    </section>
-    <!-- /contact -->
-
     <section class="slider-section">
       <div class="container">
-        <div class="center">
-          <h2>Купить лицензию Windows 10</h2>
-        </div>
-        <div class="slider--nojs">
+        <header class="center">
+          <h2><strong>ЛИЦЕНЗИОННЫЕ КЛЮЧИ</strong> от крупнейшего американского реселлера</h2>
+          <p>100% верификация в Microsoft</p>
+        </header>
+        <!-- /header -->
+        <div class="slider--nojs" id="slide">
           <ul class="slider__list slider-1-js">
             <li class="slider__item">
-              <img src="./img/win-10-pro.jpg" alt="Windows 10 Pro" class="prod">
+              <img src="./img/win-10-pro.png" alt="Windows 10 Pro" class="prod">
 
               <details>
                 <summary><b>Windows 10 Pro</b> 32/64 Bit на 1 ПК<div class="details-toggle" aria-label="открыть"></div>
@@ -93,8 +79,8 @@
               </details>
 
               <p class="price">
-                <del class="price__old">11290 руб</del>
-                <mark class="price__new">1390 руб</mark>
+                <del class="price__old">98 &#36;</del>
+                <mark class="price__new">49 &#36;</mark>
               </p>
 
               <button class="btn btn--slider">Купить</button>
@@ -102,7 +88,7 @@
             <!-- /slider__item -->
 
             <li class="slider__item">
-              <img src="./img/win-serwer-19.jpg" alt="Windows Server 2019 Standard" class="prod">
+              <img src="./img/win-serwer-19.png" alt="Windows Server 2019 Standard" class="prod">
 
               <details>
                 <summary><b>Windows Server 2019 Standard</b> 32/64 Bit на 1 ПК<div class="details-toggle"
@@ -119,8 +105,8 @@
               </details>
 
               <p class="price">
-                <del class="price__old">11290 руб</del>
-                <mark class="price__new">1390 руб</mark>
+                <del class="price__old">298 &#36;</del>
+                <mark class="price__new">149 &#36;</mark>
               </p>
 
               <button class="btn btn--slider">Купить</button>
@@ -128,7 +114,7 @@
             <!-- /slider__item -->
 
             <li class="slider__item">
-              <img src="./img/office-pro+16.jpg" alt="Office 2016 Professional (Plus)" class="prod">
+              <img src="./img/office-pro+16.png" alt="Office 2016 Professional (Plus)" class="prod">
 
               <details>
                 <summary><b>Office 2016 Professional (Plus)</b> 32/64 Bit на 1 ПК<div class="details-toggle"
@@ -150,8 +136,8 @@
               </details>
 
               <p class="price">
-                <del class="price__old">11290 руб</del>
-                <mark class="price__new">1390 руб</mark>
+                <del class="price__old">118 &#36;</del>
+                <mark class="price__new">59 &#36;</mark>
               </p>
 
               <button class="btn btn--slider">Купить</button>
@@ -159,7 +145,7 @@
             <!-- /slider__item -->
 
             <li class="slider__item">
-              <img src="./img/office-home_student-16.jpg" alt="Office 2016 Home and Student" class="prod">
+              <img src="./img/office-home_student-16.png" alt="Office 2016 Home and Student" class="prod">
 
               <details>
                 <summary><b>Office 2016 Home and Student</b> 32/64 Bit на 1 ПК <div class="details-toggle"
@@ -183,8 +169,8 @@
               </details>
 
               <p class="price">
-                <del class="price__old">11290 руб</del>
-                <mark class="price__new">1390 руб</mark>
+                <del class="price__old">110 &#36;</del>
+                <mark class="price__new">55 &#36;</mark>
               </p>
 
               <button class="btn btn--slider">Купить</button>
@@ -192,7 +178,7 @@
             <!-- /slider__item -->
 
             <li class="slider__item">
-              <img src="./img/office-home&student-only.jpg" alt="Office 2019 Home and Student (for PC only)"
+              <img src="./img/office-home&student-only.png" alt="Office 2019 Home and Student (for PC only)"
                 class="prod">
 
               <details>
@@ -206,8 +192,8 @@
               </details>
 
               <p class="price">
-                <del class="price__old">11290 руб</del>
-                <mark class="price__new">1390 руб</mark>
+                <del class="price__old">128 &#36;</del>
+                <mark class="price__new">64 &#36;</mark>
               </p>
 
               <button class="btn btn--slider">Купить</button>
@@ -215,7 +201,7 @@
             <!-- /slider__item -->
 
             <li class="slider__item">
-              <img src="./img/office-pro+19.jpg" alt="Office 2019 Professional (Plus)" class="prod">
+              <img src="./img/office-2019-professional-plus.png" alt="Office 2019 Professional (Plus)" class="prod">
 
               <details>
                 <summary><b>Office 2019 Professional (Plus)</b> 32/64 Bit на 1 ПК <div class="details-toggle"
@@ -253,8 +239,8 @@
               </details>
 
               <p class="price">
-                <del class="price__old">11290 руб</del>
-                <mark class="price__new">1390 руб</mark>
+                <del class="price__old">138 &#36;</del>
+                <mark class="price__new">69 &#36;</mark>
               </p>
 
               <button class="btn btn--slider">Купить</button>
@@ -265,6 +251,17 @@
           <!-- /slider__list -->
         </div>
         <!-- /slider--nojs -->
+        <footer>
+          <div class="icons-online">
+            <img src="./img/visa.png" alt="Оплата картой Visa">
+            <img src="./img/mastercard.png" alt="Оплата картой MasterCard">
+            <img src="./img/maestro.png" alt="Опллата картой Maestro">
+            <img src="./img/paypal.png" alt="Оплата при помощи PayPal">
+          </div>
+          <!-- /icons-inline -->
+          <p>Поставка ключа на ваш email через 3 минуты после оплаты!</p>
+        </footer>
+        <!-- /footer -->
       </div>
       <!-- /container -->
     </section>
@@ -454,25 +451,123 @@
     </section>
     <!-- /faq -->
 
-    <section class="video">
+    <section class="comments">
       <div class="container">
-        <div class="video__wrap">
-          <video width="775" height="407" controls="controls" poster="./img/video-poster.jpg">
-            <source src="./video/windows.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-            <source src="./video/windows.webm" type='video/webm; codecs="vp8, vorbis"'>
-          </video>
+
+        <div class="center">
+          <h2>Отзывы наших клиентов:</h2>
         </div>
-        <!-- /video__wrap -->
+        <ul class="comments__list">
+          <li class="comments__item">
+            <img src="./img/1478101966073.jpg" alt="Никитос" class="ava">
+            <p class="name">Никитос</p>
+            <p>В прошлом году купил тут винду, недавно обновил, а другу порекомендовал тут купить ключ для виндовс
+              сервер. Письмо на почту пришло через 5 минут. Наша оценка 5/5.</p>
+              <p class="date">380 дней назад</p>
+          </li>
+          <li class="comments__item">
+            <img src="./img/1478087072525.jpg" alt="Дмитрий" class="ava">
+            <p class="name">Дмитрий</p>
+            <p>Сначала не понял как это работает, позвонил в поддержку ребята все объяснили. Оформил покупку. Заказ
+              обработали быстро. Через час точно уже работал на обновленном компе. Все работает- комп теперь летает,
+              никаких ошибок и блокировок.</p>
+              <p class="date">15 дней назад</p>
+          </li>
+          <li class="comments__item">
+            <img src="./img/1478160706650.jpg" alt="Алиса" class="ava">
+            <p class="name">Алиса</p>
+            <p>Просто спасли, отчет сдавать сегодня. Ввела ключ для Office 2016 активация прошла успешно. Программа
+              уже в работе.</p>
+              <p class="date">200 дней назад</p>
+          </li>
+          <li class="comments__item">
+            <img src="./img/1479469108308.jpg" alt="Капитан Америка" class="ava">
+            <p class="name">Капитан Америка</p>
+            <p>Делаю периодические заказы то себе, то знакомым на этом сайте, техподдержка всегда отвечает и помогает
+              с установкой и активацией. В общем я доволен- все работает и экономия ощутима</p>
+              <p class="date">17 дней назад</p>
+          </li>
+          <li class="comments__item">
+            <img src="./img/1478087072770.jpg" alt="Сергей" class="ava">
+            <p class="name">Сергей</p>
+            <p>Уже хотел покупать лицензию, но пришлось деньги вложить в более необходимое дело. Сначала скептически
+              отнесся к возможности купить ключ и не парится, но выбора не было. Рискнул. Оформил покупку на ключ к
+              Windows Server.
+              Активация прошла успешно и быстро. Все обновилось за считанные минуты. Прошло 10 месяцев, никаких
+              проблем не возникло. Зашел на сайт купить ключ к Office и решил оставить отзыв.
+            </p>
+            <p class="date">135 дней назад</p>
+          </li>
+        </ul>
+        <!-- /comments__list -->
       </div>
       <!-- /container -->
     </section>
-    <!-- /video -->
+    <!-- /comments -->
 
   </main>
   <!-- /main -->
 
+  <footer class="header footer">
+
+    <div class="container">
+
+      <div class="header__block-logo">
+
+        <a href="#" class="header__logo hidde-md">
+          <svg width="50" height="50">
+            <use xlink:href="#microsoft"></use>
+          </svg>
+        </a>
+
+        <div class="footer__logo">
+          <a href="#slide"><img src="./img/win-10-pro.png" alt="Windows 10 Pro" class="footer__prod-img"></a>
+          <a href="#slide"><img src="./img/win-serwer-19.png" alt="Windows Server 2019 Standard"
+              class="footer__prod-img"></a>
+          <a href="#slide"><img src="./img/office-pro+16.png" alt="Office 2016 Professional (Plus)"
+              class="footer__prod-img"></a>
+          <a href="#slide"><img src="./img/office-home_student-16.png" alt="Office 2016 Home and Student"
+              class="footer__prod-img"></a>
+          <a href="#slide"><img src="./img/office-home&student-only.png"
+              alt="Office 2019 Home and Student (for PC only)" class="footer__prod-img"></a>
+          <a href="#slide"><img src="./img/office-2019-professional-plus.png" alt="Office 2019 Professional (Plus)"
+              class="footer__prod-img"></a>
+        </div>
+        <!-- /header__logo-promo -->
+      </div>
+      <!-- /header__block-logo -->
+
+      <div class="header__block-contact hidde-md">
+        <button class="header__link btn">Заказать звонок</button>
+      </div>
+      <!-- /header__block-contact -->
+
+    </div>
+    <!-- /container -->
+  </footer>
+  <!-- /header -->
+
 
   <script src="./js/main-debug.js"></script>
+
+  <div class="popap">
+    <div class="popup__content">
+      <button class="popup__close" aria-label="закрыть окно"></button>
+
+      <form action="#" class="form">
+        <h2>Заказать звонок</h2>
+        <p>Введите Ваши данные, мы Вам перезвоним:</p>
+
+        <input type="text" placeholder="Ваше имя">
+        <input type="tel" placeholder="Ваш телефон">
+
+        <button class="btn">Заказать звонок</button>
+      </form>
+      <!-- /form -->
+    </div>
+    <!-- /popup__content -->
+  </div>
+<!-- /popap -->
 </body>
 
 </html>

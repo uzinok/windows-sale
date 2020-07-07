@@ -7,7 +7,7 @@
   width: 100%;
   top: 0px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 1;
 }
 
 .header__block-logo {
@@ -23,6 +23,7 @@
   text-align: center;
 
   & strong {
+    display: block;
     color: #4C5499;
   }
 
@@ -38,6 +39,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  & p {
+    margin: 0 5px 2px 0;
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: right;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .header__link {
@@ -61,17 +73,6 @@
 
   .header__logo {
     display: block;
-    background: linear-gradient(13deg, #4e5197 33%, #74a3cc 99%, #106ebf);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #007bff;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 18px;
-    line-height: 26px;
-    
     position: relative;
     padding-right: 40px;
 
@@ -79,16 +80,27 @@
       content: '';
       display: block;
       background-color: #4e5197;
-      height: 52px;
+      height: 120%;
       width: 1px;
       position: absolute;
-      top: 0;
+      top: 50%;
       right: 20px;
+      transform: translateY(-50%);
+    }
+
+    & svg {
+      display: block;
+      width: 55px;
+      height: 55px;
+
+      @media (min-width: @min-lg) {
+        width: 65px;
+        height: 65px;
+      }
     }
   }
 
   .header__logo-promo {
-    font-size: 20px;
     text-align: left;
   }
 
@@ -102,24 +114,11 @@
 }
 
 @media (min-width: @min-lg) {
-  .header__logo {
-    font-size: 22px;
-
-    &::after {
-      height: 62px;
-      top: 50%;transform: translateY(-50%);
-    }
-  }
-
   .header__logo-promo {
-    font-size: 32px;
+    font-size: 24px;
 
     & span {
-      font-size: 22px;
+      font-size: 18px;
     }
-  }
-
-  .header__link { 
-    font-size: 22px;
   }
 }

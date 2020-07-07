@@ -10,6 +10,10 @@ body {
   text-align: left;
 }
 
+.hidde {
+  display: none;
+}
+
 main {
   padding: 100px 0 0;
 
@@ -35,7 +39,7 @@ img {
 .hidde-md {
 
   @media (max-width: @max-md) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -43,9 +47,10 @@ section {
   padding-top: 40px;
   padding-bottom: 40px;
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     color: #fff;
     background-image: url(../img/bg-md.jpg);
+    background-size: cover;
 
     @media (min-width: @min-md) {
       padding-top: 90px;
