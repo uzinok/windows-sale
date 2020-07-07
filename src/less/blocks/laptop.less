@@ -30,10 +30,16 @@
     @media (min-width: @min-lg) {
         position: relative;
         background-color: #3f61a3;
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
 
         &::before {
             position: absolute;
+
+            @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+                top: 0;
+                left: 0;
+            }
         }
     }
 }
@@ -42,14 +48,13 @@
     text-align: left;
     background-color: #fff;
     border: 6px solid #3f61a3;
-
     color: #333;
 
     @media (min-width: @min-md) {
         width: 50%;
     }
 
-    
+
     @media (min-width: @min-lg) {
         border: none;
         width: calc(100% - 12px);
@@ -60,7 +65,7 @@
         padding-top: 50px;
         padding-bottom: 50px;
         padding-left: 50%;
-        
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+        clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
     }
 }

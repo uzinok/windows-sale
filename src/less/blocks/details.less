@@ -4,6 +4,14 @@ details summary::-webkit-details-marker {
 
 details summary {
     list-style: none;
+    outline: none;
+    color: #3f5c97;
+    transition: 0.2s 0.2s ease-out;
+
+    &:active,
+    &:focus {
+        color: #4587c5;
+    }
 }
 
 details {
@@ -57,6 +65,13 @@ summary {
         left: 50%;
         transform: translate(-50%, -50%);
         transition: 0.2s 0.2s ease-out;
+
+
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            display: none;
+        }
     }
 
     &::before {

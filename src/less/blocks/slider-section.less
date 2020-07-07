@@ -18,11 +18,20 @@
 
     & details {
         padding-right: 0;
+
+        &[open] {
+            .details-toggle {
+
+                &::after {
+                    content: 'Закрыть';
+                }
+            }
+        }
     }
 
     & summary {
         display: block;
-        position: relative;
+        // position: relative;
         width: 100%;
     }
 
@@ -49,6 +58,13 @@
 
         &::before {
             display: none;
+        }
+
+        &:hover {
+
+            &::after {
+                text-decoration: none;
+            }
         }
     }
 }
