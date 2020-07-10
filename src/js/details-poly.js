@@ -16,9 +16,7 @@ void (function (root, factory) {
     window.addEventListener('click', clickHandler)
   
     injectStyle('details-polyfill-style',
-      'html.no-details ' + DETAILS + ':not([open]) > :not(' + SUMMARY + ') { display: none; }\n' +
-      'html.no-details ' + DETAILS + ' > ' + SUMMARY + '::after { content: "Подробнее"; position: absolute; bottom: 0; right: 0;}\n' +
-      'html.no-details ' + DETAILS + '[open] > ' + SUMMARY + '::after { content: "Закрыть"; }')
+      'html.no-details ' + DETAILS + ':not([open]) > :not(' + SUMMARY + ') { display: none; }\n')
   
     /*
      * Click handler for `<summary>` tags

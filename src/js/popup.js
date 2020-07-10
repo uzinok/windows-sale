@@ -11,7 +11,6 @@ function popup(popup) {
 
     // закрытие popup по подложке
     popup.addEventListener('click', function (event) {
-        console.log(event)
         if (event.target == popup)
             closePopup(popup);
     })

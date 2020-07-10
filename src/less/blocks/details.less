@@ -6,7 +6,7 @@ details summary {
     list-style: none;
     outline: none;
     color: #3f5c97;
-    transition: 0.2s 0.2s ease-out;
+    transition: 0.2s ease-out;
 
     &:active,
     &:focus {
@@ -17,14 +17,11 @@ details summary {
 details {
     display: block;
     position: relative;
-    padding-right: 55px;
     text-align: left;
 
-    &[open] .details-toggle {
+    &[open] {
 
-        &::before {
-            transform: translate(-50%, -50%) rotate(-360deg);
-        }
+        & summary::after { content: "Закрыть"; }
     }
 }
 
@@ -35,46 +32,12 @@ summary {
     & b {
         display: block;
     }
-}
 
-.details-toggle {
-    appearance: none;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    border: none;
-    background-color: transparent;
-    width: 48px;
-    height: 48px;
-
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-
-    &::before,
     &::after {
-        content: '';
-        display: block;
-        width: 26px;
-        height: 4px;
-        background-color: #3f61a3;
-
+        content: "Подробнее";
+        text-decoration: underline;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: 0.2s 0.2s ease-out;
-
-
-
-        @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) {
-            display: none;
-        }
-    }
-
-    &::before {
-        transform: translate(-50%, -50%) rotate(90deg);
+        bottom: 0;
+        right: 0;
     }
 }

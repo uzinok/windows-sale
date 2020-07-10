@@ -16,55 +16,12 @@
         text-align: center;
     }
 
-    & details {
-        padding-right: 0;
-
-        &[open] {
-            .details-toggle {
-
-                &::after {
-                    content: 'Закрыть';
-                }
-            }
-        }
-    }
-
     & summary {
         display: block;
-        // position: relative;
         width: 100%;
-    }
-
-    & .details-toggle {
-        width: 100px;
-        height: auto;
-        bottom: 0;
-        right: 0;
-        transform: translate(0, 0);
 
         &::after {
-            width: 100px;
-            content: 'Подробнее';
-            background-color: transparent;
-            top: auto;
-            left: auto;
-            right: 0;
-            bottom: 0;
-            transform: translate(0, 0);
-            color: #4c5499;
-            text-decoration: underline;
-            text-align: right;
-        }
-
-        &::before {
-            display: none;
-        }
-
-        &:hover {
-
-            &::after {
-                text-decoration: none;
-            }
+            bottom: -1em;
         }
     }
 }

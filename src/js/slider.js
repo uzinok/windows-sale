@@ -1,9 +1,7 @@
-function slider(sliderList, countDesktop) {
-
+function slider(sliderList, countDesktop, count) {
     // родитель слайдера
     let parentSlider = sliderList.parentNode,
         sliderItems = sliderList.querySelectorAll('.slider__item'),
-        count = 0,
         widthWap = 240,
         widthDesktop = 450;
 
@@ -41,8 +39,6 @@ function slider(sliderList, countDesktop) {
                     pagerButton.classList.add('active')
                 }
                 pagerButton.addEventListener('click', function (e) {
-
-                    e = e || event
                     sliderClick(e);
                 })
             }
@@ -139,20 +135,16 @@ function slider(sliderList, countDesktop) {
 
         if (parentSlider.querySelector('.slider__prew')) {
 
-            if (parentSlider.querySelector('.slider__prew').disabled = true) {
-                parentSlider.querySelector('.slider__prew').disabled = false;
-            }
-
-            if (parentSlider.querySelector('.slider__next').disabled = true) {
-                parentSlider.querySelector('.slider__next').disabled = false;
-            }
-
             if (count == 0) {
                 parentSlider.querySelector('.slider__prew').disabled = true;
+            } else {
+                parentSlider.querySelector('.slider__prew').disabled = false;
             }
 
             if (count == (sliderItems.length - 1)) {
                 parentSlider.querySelector('.slider__next').disabled = true;
+            } else {
+                parentSlider.querySelector('.slider__next').disabled = false;
             }
 
 
@@ -198,4 +190,69 @@ function slider(sliderList, countDesktop) {
             }
         }, 3000)
     }
+
+    if (document.querySelector('.footer__logo') && parentSlider.classList.contains('prod-slider')) {
+        let footerLinks = document.querySelectorAll('.footer__logo a');
+        
+        for (let i = 0; i < footerLinks.length; i++) {
+            footerLinks[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                count = this.getAttribute('data-slide')
+                sliderClick();
+
+                // вызываю функцию скролла
+                scrollMenu();
+            
+                // переменная для остановки анимации
+                var temp;
+                // функция скролла
+                function scrollMenu() {
+
+                    console.log(parentSlider.querySelector('li[data-slide="' + count + '"]'))
+            
+                  // отмена анимации
+                  cancelAnimationFrame(temp);
+            
+                  // время начала анимации
+                  var start = performance.now();
+            
+                  // высота скролла страницы
+                  var from = window.pageYOffset || document.documentElement.scrollTop,
+                    // высота от верхнего края окна браузера до блока
+                    to = document.querySelector('li[data-slide="' + count + '"]').getBoundingClientRect().top - 100;
+            
+                  // время анимации из расчета 5000px за секунду
+                  duration = 1000 * Math.abs(to) / 5000;
+            
+                  // анимация скролла
+                  requestAnimationFrame(function step(timestamp) {
+                    // timestamp метка времени от начала анимации
+                    // сколько прошло времени (timestamp - start)
+                    // (timestamp - start) / duration приравниваем к 1
+                    var progress = (timestamp - start) / duration;
+                    1 <= progress && (progress = 1);
+                    // from + to расстояние от верха документа до верха блока
+                    // from + to * progress промежуточное расстояние до блока. progress == 1 мы на месте
+                    // изменение высоты скролла
+                    window.scrollTo(0, from + to * progress | 0);
+            
+                    // остановка анимации
+                    // 1 > progress анимация продолжается или
+                    // задаем hash 
+            
+                    (1 > progress) ? temp = requestAnimationFrame(step): (e.target.blur());
+            
+                    // отменяем прокрутку если крутим колесом мышки
+                    document.addEventListener("wheel", function () {
+                      cancelAnimationFrame(temp);
+                      e.target.blur();
+                    })
+                  })
+                }
+
+
+            })
+        }
+    }
+    
 }
