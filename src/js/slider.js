@@ -17,7 +17,7 @@ function slider(sliderList, countDesktop, count) {
 
     sliderWrap.appendChild(sliderWrapList);
     sliderWrapList.appendChild(sliderList);
-
+    
     function createElements() { 
         if (countDesktop != 1) {
             
@@ -41,6 +41,11 @@ function slider(sliderList, countDesktop, count) {
                 pagerButton.addEventListener('click', function (e) {
                     sliderClick(e);
                 })
+            }
+
+            let interactive_elements = sliderList.querySelectorAll('a, button, input, select, progress, textarea, details');
+            for (let i = 0; i < interactive_elements.length; i++) {
+                interactive_elements[i].setAttribute("tabindex", -1)
             }
 
             function createButton(buttonClass, buttonParent, ariaText, i) {

@@ -38,29 +38,13 @@
       <!-- /header__block-logo -->
 
       <div class="header__block-contact">
-        <div class="hidde-md">
-          <p>Нужна консультация?</p>
-          <p>Мы перезвоним через 3 минуты!</p>
-        </div>
-        <button class="header__link btn btn-popup">Заказать звонок</button>
-        <div class="popap">
-          <div class="popup__content">
-            <button class="popup__close" aria-label="закрыть окно"></button>
-      
-            <form action="#" class="form">
-              <h2>Заказать звонок</h2>
-              <p>Введите Ваши данные, мы Вам перезвоним:</p>
-      
-              <input type="text" placeholder="Ваше имя">
-              <input type="tel" placeholder="Ваш телефон">
-      
-              <button class="btn">Заказать звонок</button>
-            </form>
-            <!-- /form -->
-          </div>
-          <!-- /popup__content -->
-        </div>
-        <!-- /popap -->
+        <menu class="menu hidde-md">
+          <ul class="menu__list">
+            <li><a href="#advantage" class="scroll-js">Приемущества</a></li>
+            <li><a href="#faq" class="scroll-js">FAQ</a></li>
+            <li><a href="#comments" class="scroll-js">Отзывы</a></li>
+          </ul>
+        </menu>
       </div>
       <!-- /header__block-contact -->
 
@@ -272,7 +256,7 @@
             <img src="./img/paypal.png" alt="Оплата при помощи PayPal">
           </div>
           <!-- /icons-inline -->
-          <p>Поставка ключа на ваш email через 3 минуты после оплаты!</p>
+          <p>Поставка ключа на ваш email через 15 минуты после оплаты!</p>
         </footer>
         <!-- /footer -->
       </div>
@@ -280,7 +264,7 @@
     </section>
     <!-- /slider -->
 
-    <section class="advantage">
+    <section class="advantage" id="advantage">
       <div class="center">
         <h2>5 ПРЕИМУЩЕСТВ ЛИЦЕНЗИОННОГО ПО</h2>
       </div>
@@ -335,7 +319,7 @@
     </section>
     <!-- /advantage -->
 
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="container">
         <div class="center">
           <h2>Часто задаваемые вопросы</h2>
@@ -349,7 +333,7 @@
           <ol class="list-nember">
             <li>
               Отсутствуют какие-либо бумаги, диски, коробки, а также оплата доставки, мы лишь предоставляем лицензионные
-              коды. Вам необходимо будет амостоятельно скачать установочные файлы с официального сайта Microsoft по
+              коды. Вам необходимо будет самостоятельно скачать установочные файлы с официального сайта Microsoft по
               предоставленной ссылке.
             </li>
             <li>
@@ -393,16 +377,6 @@
         <!-- /details -->
 
         <details>
-          <summary> Контролирующие органы одобрят такую лицензию?
-          </summary>
-
-          <p>Предоставляемый товар предназначен только для личного использования и не подходит для ПК в госучреждениях и
-            коммерческих организациях. Мы не предоставляем никаких коробок, наклеек и документов, которые потребуются от
-            организации проверяющими лицами.</p>
-        </details>
-        <!-- /details -->
-
-        <details>
           <summary> Можно ли использовать ключ активации одновременно на нескольких ПК?
           </summary>
 
@@ -413,21 +387,10 @@
         <!-- /details -->
 
         <details>
-          <summary> Работаете ли вы с юридическими лицами?
-          </summary>
-
-          <p>
-            Нет. Наши лицензионные ключи предназначены только для некоммерческого использования. У нас не предусмотрена
-            оплата по безналичному расчету.
-          </p>
-        </details>
-        <!-- /details -->
-
-        <details>
           <summary> Каким образом я смогу получить ключ активации Windows 10?
           </summary>
 
-          <p>Он придет на Вашу электронную почту в течение 2-х часов после оплаты. В выходные и праздничные дни
+          <p>Он придет на Вашу электронную почту в течение 30 минут после оплаты. В выходные и праздничные дни
             получение ключей происходит до пяти часов. Обычно письмо приходит намного быстрее, и не приходится ждать
             несколько часов.</p>
         </details>
@@ -457,7 +420,7 @@
     </section>
     <!-- /faq -->
 
-    <section class="comments">
+    <section class="comments" id="comments">
       <div class="container">
 
         <div class="center">
@@ -538,18 +501,13 @@
       </div>
       <!-- /header__block-logo -->
 
-      <!-- <div class="header__block-contact hidde-md">
-        <button class="header__link btn btn-popup">Заказать звонок</button>
-      </div> -->
-      <!-- /header__block-contact -->
-
     </div>
     <!-- /container -->
   </footer>
   <!-- /header -->
 
 
-  <script src="./js/main-debug.js"></script>
+  <script src="./js/main.js"></script>
 
 </body>
 
