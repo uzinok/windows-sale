@@ -18,26 +18,62 @@ details {
     display: block;
     position: relative;
     text-align: left;
-
-    &[open] {
-
-        & summary::after { content: "Закрыть"; }
-    }
+    outline: none;
 }
 
 summary {
+    position: relative;
     text-align: left;
     cursor: pointer;
 
     & b {
         display: block;
     }
+}
+
+.summary-gauge {
+    float: right;
+    position: absolute;
+    top: 12px;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: background 200ms;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #4c5499;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background 200ms, transform 200ms;
+    }
 
     &::after {
-        content: "Подробнее";
-        text-decoration: underline;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &:hover {
+        background-color: #4c5499;
+
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+    }
+}
+
+.details-visible {
+    & .summary-gauge {
+        &::after {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
     }
 }
